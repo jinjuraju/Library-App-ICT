@@ -1,5 +1,6 @@
 const express = require('express');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+const port=process.env.PORT || 5000;
 const nav= [
     {
         link:'/books',name:'books'
@@ -54,4 +55,4 @@ app.get('/',function(req,res){
     });
 });
 
-app.listen(5000);
+app.listen(port,()=>{console.log("server ready at"+port)});
